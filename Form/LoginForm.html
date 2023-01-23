@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <title>Login Form</title>
+    <style>
+        #res{
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 1px 1px 5px 2px lightgrey;
+            margin-left: 33%;
+            margin-top: 10%;
+            width: 33%;
+        }
+        #account{
+            background-color: rgb(61, 211, 16);
+            margin-top: 30px;
+            margin-left: 30%;
+            margin-bottom: 20px;
+        }
+        .gap-2{
+            border-bottom: 0.1px solid black;
+        }
+        #show{
+            border: 0px solid;
+            margin-left: 63%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: whitesmoke;">
+    <form action="" method="post" target="">
+    <div id="res">
+        <h3  style="text-align: center;"><b>Login Form</b></h3>
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-10">
+                <input type="text"  class="form-control-plaintext" id="staticEmail" value="email@example.com">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="password" class="col-sm-2 col-form-label">Password:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="password" placeholder="minimum 8 character">
+            </div>
+        </div>
+
+         <button type="button" id="show" onclick="toggle(this)">Show Password</button>
+
+        <div style="border-bottom: 1px solid grey;">
+            <input style="width:100%; background-color:rgb(0, 85, 255); border:0px solid; border-radius:5px; padding:10px; color:white;" type="submit" id="submit" text="Submit" value="SUBMIT">
+
+            
+            <p style="text-align: center;"><a href="forget.html">Forgotten password?</a></p>
+        </div>     
+        
+        <button id="account" type="button" class="btn btn-success"><a href="Create.html">Create Account</a></button>
+        
+    </div>
+    </form>
+</body>
+<script>
+  var password = document.getElementById('password');
+  function toggle(elem){
+    var type = password.getAttribute('type');
+    if(type === 'password'){
+        password.setAttribute('type','text');
+        elem.innerText  = "Hide Password";
+    }else{
+        password.setAttribute('type','password');
+        elem.innerText = "Show Password"
+    }
+  }
+</script>
+
+</html>

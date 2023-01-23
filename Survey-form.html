@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Build a survey form using HTML and CSS</title>
+	<style type="text/css">
+		body{
+			background-color: #05c46b;
+			font-family: Verdana;
+			text-align: center;
+		}
+		form{
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+		}
+		.form-control{
+			text-align: left;
+			margin-bottom: 25px;
+		}
+		.form-control Label{
+			display: block;
+			margin-bottom: 10px;
+		}
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+
+		}
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"]{
+			display: inline-block;
+			width: auto;
+		}
+		button{
+			background-color:#05c46b ;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<h1>GeeksforGeeks Survey Form</h1>
+
+	<form>
+	
+	<div class="form-control">
+		<label>Name</label>
+		<input type="text" name="name" placeholder="Enter your name">
+	</div>
+
+	<div class="form-control">
+		<label >Email</label>
+		<input type="email" name="email" placeholder="Enter your email">
+	</div>
+	<div class="form-control" > 
+		<label>Age</label>
+		<input type="text" name="age" placeholder="Enter your age">
+	</div>
+	<div class="form-control">
+		<label>Which option best describe you?</label>
+		
+		<select>
+			<option>Student</option>
+			<option>Intern</option>
+			<option>Proffessional</option>
+			<option>Other</option>
+		</select>
+	</div>
+	<div class="form-control">
+		<label>Would you recommend GeeksforGeks to a friend?</label>
+		
+
+		<input type="radio" name="friend">Yes
+		<br>
+		<input type="radio" name="friend">No
+		<br>
+		<input type="radio" name="friend">Maybe
+		
+	</div>
+
+	<div class="form-control">
+		<label>Languages and Frameworks known<small>(Check all that apply)</small></label>
+		
+		<input type="checkbox" name="Languages">C
+		<br>
+		<input type="checkbox" name="Languages">C++
+		<br>
+		<input type="checkbox" name="Languages">C#
+		<br>
+		<input type="checkbox" name="Languages">Java
+		<br>
+		<input type="checkbox" name="Languages">Python
+		<br>
+		<input type="checkbox" name="Languages">Javascript
+		<br>
+		<input type="checkbox" name="Languages">React
+		<br>
+		<input type="checkbox" name="Languages">Angular
+		<br>
+		<input type="checkbox" name="Languages">Django
+		<br>
+		<input type="checkbox" name="Languages">Spring
+		
+	</div>
+
+	<div class="form-control">
+		<label>Any comments or suggestion</label>
+		
+		<textarea placeholder="Enter your comment here"></textarea>
+	</div>
+
+	<button>Submit</button>
+
+	</form>
+
+</body>
+</html>
